@@ -16,11 +16,6 @@
 	const starfishCorner = [i.NONE, i.STARFISH, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
 	const spiralShellCorner = [i.NONE, i.SPIRAL_SHELL, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
 	const pieceOfAShellCorner = [i.NONE, i.PIECE_OF_A_SHELL, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
-	const corners = [starfishCorner, spiralShellCorner, pieceOfAShellCorner];
-
-	const display = (wantedDiagonal, wantedCorner) => {
-		return pickedDiagonal === wantedDiagonal && pickedCorner === wantedCorner;
-	}
 </script>
 
 <main class="container mx-auto">
