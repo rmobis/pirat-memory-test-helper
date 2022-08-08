@@ -1,5 +1,4 @@
-<script lang="ts">
-
+<script context="module" lang="ts">
 	import none from '../assets/none.png';
 	import starfish from '../assets/starfish.gif';
 	import spiralShell from '../assets/spiral-shell.gif';
@@ -11,7 +10,9 @@
 		SPIRAL_SHELL: spiralShell,
 		PIECE_OF_A_SHELL: pieceOfAShell
 	});
+</script>
 
+<script lang="ts">
 	export let items = Array(9).fill(images.NONE);
 </script>
 
