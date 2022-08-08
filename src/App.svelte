@@ -16,6 +16,7 @@
 	const starfishCorner = [i.NONE, i.STARFISH, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
 	const spiralShellCorner = [i.NONE, i.SPIRAL_SHELL, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
 	const pieceOfAShellCorner = [i.NONE, i.PIECE_OF_A_SHELL, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE, i.NONE,  i.NONE];
+	const corners = [starfishCorner, spiralShellCorner, pieceOfAShellCorner];
 </script>
 
 <main class="container mx-auto">
@@ -35,7 +36,7 @@
 
 		<div class="flex flex-row gap-x-8 justify-center w-full">
 			{#each diags as diag, i}
-				<label class="flex flex-col gap-2 p-2 bg-gray-200 rounded border-2 border-gray-400 cursor-pointer" class:bg-gray-400={pickedDiagonal === i} class:border-gray-700={pickedDiagonal === i}>
+				<label class="flex flex-col gap-2 p-2 bg-zinc-800 rounded border-2 border-zinc-900 cursor-pointer" class:bg-slate-800={pickedDiagonal === i} class:border-slate-900={pickedDiagonal === i}>
 					<input type="radio" name="pickedDiagonal" bind:group={pickedDiagonal} value={i}>
 					<Pattern items={diag}/>
 				</label>
@@ -44,7 +45,7 @@
 
 		<div class="flex flex-row gap-x-8 justify-center w-full">
 			{#each corners as corner, i}
-				<label class="flex flex-col gap-2 p-2 bg-gray-200 rounded border-2 border-gray-400 cursor-pointer" class:bg-gray-400={pickedCorner === i} class:border-gray-700={pickedCorner === i} class:hidden={Math.floor(pickedDiagonal/2) === i}>
+				<label class="flex flex-col gap-2 p-2 bg-zinc-800 rounded border-2 border-zinc-900 cursor-pointer" class:bg-slate-800={pickedCorner === i} class:border-slate-900={pickedCorner === i} class:hidden={Math.floor(pickedDiagonal/2) === i}>
 					<input type="radio" name="pickedCorner" bind:group={pickedCorner} value={i}>
 					<Pattern items={corner}/>
 				</label>
